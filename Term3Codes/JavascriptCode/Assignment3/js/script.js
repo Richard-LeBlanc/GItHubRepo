@@ -36,9 +36,7 @@ class Pizza{
         return selection;
     }
 
-
     calculatePrice(){
-        
         //  Pan dough is 2 dollars more thick crust is 1 dollar more
         const doughCharge = (this.dough == 'pan' ? 2 : (this.dough == 'thick' ? 1 : 0))
 
@@ -57,8 +55,7 @@ class Pizza{
         const vegetableCharge = this.getToppingQuantity(this.vegetable)
 
         return 19.99 + sauceCharge + doughCharge + cheeseCharge 
-                    + meatCharge + premiumMeatCharge + vegetableCharge;
-                           
+                    + meatCharge + premiumMeatCharge + vegetableCharge;                     
     }
 
     //  creates a string that describes the dough and sauce
@@ -100,7 +97,7 @@ class Pizza{
         return message;
     }
 
-    //  output the total quantity of selected items in a section
+    //  output the total quantity of selected items in a section.
     //  only useful for the toppings and sauce, not dough
     getToppingQuantity(selection){
         let quantity = 0;
@@ -123,8 +120,6 @@ const meats = document.body.querySelectorAll("div.regularMeats input");
 const premiumMeats = document.body.querySelectorAll("div.premiumMeats input");
 const veggies = document.body.querySelectorAll("div.veggies input");
 
-let divID = 0;
-
 
 //  returns the value of the selected dough
 function doughChoice(){
@@ -143,15 +138,11 @@ function getSelections(choice){
     return choices;
 };
 
-function removeItem(){
-    
-}
 //  append to the body a description of their current order.
 function createView(pizza){
     //  create a div to hold each part of each order name its class cartItems for styling
     const itemDiv = document.createElement("div");
     itemDiv.setAttribute("class", "cartItems");
-    itemDiv.setAttribute("divID", divID++);
 
 
     //  create a figure and append that to the main div
@@ -215,26 +206,15 @@ function createView(pizza){
     itemDiv.appendChild(paragraphContainer);
 
 
-    //  a number input and list of toppings are displayed for the user to verify their selection
-    //  and a delete button is created
+    //  create and element to hold the price of the ordered pizza
     const tagDiv = document.createElement("div");
     const priceTag = document.createElement("p");    
 
     priceTag.textContent = pizza.price;
-    priceTag.setAttribute("divID", divID);
-    priceTag.addEventListener("change", updatePrice(divID));
-
     tagDiv.appendChild(priceTag);
 
     itemDiv.appendChild(tagDiv);
     document.body.querySelector(".cart").appendChild(itemDiv);
-}
-
-function removeItem(){
-    document.body.querySelectorAll("div.divID").forEach(x => document.removeChild(x));
-}
-
-function updatePrice(divID){
 }
 
 function addToCart(){
@@ -251,6 +231,7 @@ function addToCart(){
     let myPizza = new Pizza(dough, sauce, cheese, meat, premiumMeat, vegetable);
     pizzas.push(myPizza);
     createView(myPizza); 
+    document.getElementById("output").textContent = "Richard LeBlanc 200 182 873"
 }
 
 cartButton.addEventListener("click", addToCart);
