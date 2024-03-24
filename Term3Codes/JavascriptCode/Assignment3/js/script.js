@@ -16,14 +16,25 @@ class Pizza{
 
     constructor(dough, sauce, cheese, meat, premiumMeat, vegetable) {
         this.dough = dough;
-        this.sauce = sauce;
-        this.cheese = cheese;
-        this.meat = meat;
-        this.premiumMeat = premiumMeat;
-        this.vegetable = vegetable;
+        this.sauce = this.verifyQuantities(2, sauce);
+        this.cheese = this.verifyQuantities(3, cheese);
+        this.meat = this.verifyQuantities(3, meat);
+        this.premiumMeat = this.verifyQuantities(3, premiumMeat);
+        this.vegetable = this.verifyQuantities(3, vegetable);
         this.paragraph = this.createParagraph();
         this.price = Math.round(this.calculatePrice() * 100) / 100;
     };
+
+    //  ensure max number is in line with store policies
+    verifyQuantities(max, selection){
+        const keys = Object.keys(selection);
+        keys.forEach(x => {
+            if (selection[x] > max){
+                selection[x] = max;
+            }
+        });
+        return selection;
+    }
 
 
     calculatePrice(){
