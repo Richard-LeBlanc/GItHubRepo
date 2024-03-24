@@ -1,0 +1,200 @@
+/* style the global fonts and elements*/
+p, label{
+    font-size: 1.2em;
+    color: #0e0e0e;
+    font-family:'Times New Roman', Times, serif;
+}
+figcaption{
+    font-size: 1.2em;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+}
+h1{
+    font-size: 2.7em;
+    color:#0e0e0e;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: auto;
+}
+h3{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+h6{
+    font-size: 2em;
+    color: #0e0e0e;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+img{
+    width: auto;
+    height: 120px;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* give our form some uniformity */
+input[type=radio]{
+    height: 14px;
+    width: 14px;
+    display: block;
+}
+input[type=number]{
+    display: block;
+    width: 30px;
+}
+
+/* Make the cart addition button some basic effects */
+button{
+    display: block;
+    font-size: 2em;
+    width: 30%;
+    height: 100px;
+    margin: auto;
+    background-color:rgb(20, 20, 179);
+    color: #e0e0e0;
+    padding: 10px;
+    margin-top: 80px;
+}
+button:hover{
+    border-color:#e0e0e0;
+    border-width: 2px;
+}
+button:active{
+    background-color: rgb(25, 25, 195);
+}
+
+.deleteButton{
+    font-size: 1.2em;
+    background-color: rgb(205, 30, 30);
+    height: 30px;
+    width: 200px;
+    margin-top: 0px;
+    margin: 10px;
+    padding: 5px;
+}
+.deleteButton:active{
+    background-color: rgb(208, 22, 22);
+}
+.cartItems{
+    width: 80%;
+    display: flex;
+    max-height: 200px;
+    align-items: center;
+    justify-content: center;
+    border: solid 5px #0e0e0e;
+    margin: 10px;
+}
+.cartItems div{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.cartItems p{
+    display: block;
+    padding: 5px;
+    margin: 0px;
+}
+.cartItems figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* line up the page in a flex-column to be able to justify items */
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* make each direct child of our form a flex container */
+form > div{
+    display: flex;
+}
+
+/* sauce and dough selections will be similarly laid out */
+form > .dough > div,
+form > .sauce > div{
+    margin: 10px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    width: 25%;
+    height: 200px;
+    text-align: center;
+    align-items: center;
+}
+form > .dough > div p,
+form > .sauce > div p{
+    margin: auto;
+    padding: 5px;
+}
+
+/* cheese and vegetable sections will be laid out similarly, but meats have two
+varieties so are going to be styled with that in mind */
+form > .cheese,
+form > .veggies{
+    display: grid;
+    width: 50%;
+    grid-template-columns: 24% 19% 24% 19%;
+    grid-template-rows: 26px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* very similar qualities, but we have to further divide up the content
+those division will get the above treatment, but we array the entire
+.meat div as a flex column */
+form > .meat{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+form > .meat div{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 24% 19% 24% 19%;
+    grid-template-rows: 26px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* stylish masthead to draw attention to our deals */
+#masthead{
+    min-height: 380px;
+    min-width: 100%; 
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat; 
+    display:flex;
+    align-content: center;
+}
+#masthead div{
+    font-size: 2.7em;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+/* form user's pizza building form */
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1080px) {
+    body > #masthead{
+        min-height: 200px
+    }
+
+}

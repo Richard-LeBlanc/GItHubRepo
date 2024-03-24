@@ -1,0 +1,23 @@
+{
+    "Company Name" : "i-scream",
+    "Head Office" : "Wyoming",
+    "established" : 2024,
+    "active" : true,
+    "Top Flavors" : [{
+                "Name" : "Peach Mango",
+                "Calories" : 250,
+                "Type" : "Milkshake",
+                "Ingredients" : ["Peach Syrup", 
+                                "Mango chunks", 
+                                "Vanilla Base"],
+                "image" : "peach-mango.svg"
+            }, {
+                "Name" : "Chocolate Mint",
+                "Calories" : 300,
+                "Type" : "Ice-cream",
+                "Ingredients" : ["Chocolate Syrup",
+                                "PepperMint Sprinkles",
+                                "Vanilla Base"],
+                "image": "chocolate-mint.svg"
+            }]
+}

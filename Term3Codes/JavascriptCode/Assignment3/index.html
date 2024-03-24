@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <!-- required meta tags -->
+        <meta charset="utf-8">
+        <meta name="robots" content="no-follow, no-index">
+        <meta name="description" content="Ordering pizza with javascript">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- pizz times web page -->
+        <title>Pizza Time!</title>
+
+        <!-- link our css and javascript, which will be defered until page loads -->
+        <link href="./css/style.css" rel="stylesheet">
+    
+        <script src="./js/script.js" defer></script>
+    </head>
+    <body>
+        <main>
+             <!-- masthead for our banner -->
+            <header id="masthead"></header>
+
+            <!-- logo will be at the top of the body, a menu will take the main focus, an aside will be added when an order is place to show a confirmation window (add class to manage the change of state)-->
+            <section>
+                <h1>PizzaTime</h1>
+                <!-- form for inputs -->
+                <form>
+                    <!-- four forms of dough, only one selection per pizza, use radios -->
+                    <h3>Select Your Dough:</h3>
+                    <div class="dough">
+                        <div>
+                            <img src="./img/dough.jpeg" alt="Thin Crust Pizza">
+                            <p>Our thin crust favourite.</p>
+                            <label for="thinDough">Thin Crust Pizza: </label>
+                            <input type="radio" name="dough" id="thinDough" value="Thin" checked>
+                        </div>
+
+                        <div>
+                            <img src="./img/dough1.jpeg" alt="Pan Pizza">
+                            <p>Our world famous pan pizza!</p>
+                            <label for="panDough">Pan Pizza 2: </label>
+                            <input type="radio" name="dough" id="panDough" value="Pan">
+                        </div>
+
+                        <div>
+                            <img src="./img/dough2.jpeg" alt="Classic Pizza">
+                            <p>Enjoy this classic style with cornmeal rolled dough.</p>
+                            <label for="classicDough">Classic Pizza: </label>
+                            <input type="radio" name="dough" id="classicDough" value="Classic">
+                        </div>
+
+                        <div>
+                            <img src="./img/dough3.jpeg" alt="Thick Crust Pizza">
+                            <p>Thick and always crispy dough.</p>
+                            <label for="thickDough">Thick Crust Pizza 1: </label>
+                            <input type="radio" name="dough" id="thickDough" value="Thick">
+                        </div>
+                    </div>
+                    <!-- each sauce can be used up to two times for double sauce or mixing sauce -->
+                    <!-- each extra sauce will cost 1 dollar more so a warning is posted in parenthesis -->
+                    <h3>Choose Your Sauce: </h3>
+                    <p>(add more for 1)</p>
+                    <div class="sauce">
+                        <div>
+                            <img src="./img/sauce.jpg" alt="BBQ sauce">
+                            <p>Sweet and tangy</p>
+                            <label for="barbecue">BBQ sauce</label>
+                            <input type="number" id="barbecue" name="barbecue" value="0" max="2" min="0">
+                        </div>
+
+                        <div>
+                            <img src="./img/sauce1.jpg" alt="Alfredo sauce">
+                            <p>Creamy Alfredo sauce</p>
+                            <label for="alfredo">Alfredo sauce</label>
+                            <input type="number" id="alfredo" name="alfredo" value="0" max="2" min="0">
+                        </div>
+
+                        <div>
+                            <img src="./img/sauce3.jpeg" alt="Marinara sauce">
+                            <p>Tradition Marinara sauce</p>
+                            <label for="marinara">Marinara sauce</label>
+                            <input type="number" id="marinara" name="marinara" value="0" max="2" min="0">
+                        </div>
+
+                        <div>
+                            <img src="./img/sauce4.jpeg" alt="Zesty Marinara sauce">
+                            <p>Perfectly spiced Marinara sauce</p>
+                            <label for="zesty marinara">Zesty Marinara sauce</label>
+                            <input type="number" id="zesty marinara" name="zesty marinara" value="0" max="2" min="0">
+                        </div>
+                    </div>
+                    
+                <!-- further input will be displayed in two columns in this format ie. label: input labal: input
+                        <label for=""></label>
+                        <input type="number" id="" name="" value="0" min="0" max="3"> -->
+                    <h3>Select Your Cheese:</h3>
+                    <p>(1 included, add more for 2.75 each)</p>
+                    <div class="cheese">
+                        <label for="feta">Feta</label>
+                        <input type="number" id="feta" name="feta" value="0" min="0" max="2">
+
+                        <label for="mozzarella">Mozzarella</label>
+                        <input type="number" id="mozzarella" name="mozzarella" value="0" min="0" max="2">
+
+                        <label for="cheddar">Cheddar: </label>
+                        <input type="number" id="cheddar" name="cheddar" value="0" min="0" max="2">
+
+                        <label for="paneer">Panner: </label>
+                        <input type="number" id="paneer" name="paneer" value="0" min="0" max="2"> 
+                    </div>
+
+                    <h3>Select Your Meat:</h3>
+                    <p>(1.5 each, premium meats for 2.5)</p>
+                    <div class="meat">
+                        <div class="regularMeats">
+                            <label for="sausage">Sausage: </label>
+                            <input type="number" id="sausage" name="sausage" value="0" min="0" max="3">
+
+                            <label for="beef">Beef: </label>
+                            <input type="number" id="beef" name="beef" value="0" min="0" max="3">
+
+                            <label for="italian sausage">Italian Sausage: </label>
+                            <input type="number" id="italian sausage" name="italian sausage" value="0" min="0" max="3">
+
+                            <label for="pepperoni">Pepperoni: </label>
+                            <input type="number" id="pepperoni" name="pepperoni" value="0" min="0" max="3">
+
+                            <label for="anchovies">Anchovies: </label>
+                            <input type="number" id="anchovies" name="anchovies" value="0" min="0" max="3">
+
+                            <label for="baconCrumble">Bacon Crumble: </label>
+                            <input type="number" id="baconCrumble" name="baconCrumble" value="0" min="0" max="3">
+
+                            <label for="chicken">Chicken: </label>
+                            <input type="number" id="chicken" name="chicken" value="0" min="0" max="3">
+                        </div>
+
+                        <p>Premium meats:</p>
+                        <div class="premiumMeats">
+                            <label for="baconStrips">Bacon Strips:</label>
+                            <input type="number" id="baconStrips" name="baconStrips" value="0" min="0" max="3">
+
+                            <label for="ham">Ham: </label>
+                            <input type="number" id="ham" name="ham" value="0" min="0" max="3">
+
+                            <label for="steak">Steak: </label>
+                            <input type="number" id="steak" name="steak" value="0" min="0" max="3">
+                        </div>
+                    </div>
+
+                    <h3>Select Your veggies:</h3>
+                    <p>(1 each)</p>
+                    <div class="veggies">
+                        <label for="mushroom">Mushroom: </label>
+                        <input type="number" id="mushroom" name="mushroom" value="0" min="0" max="3">
+
+                        <label for="green pepper">Green Pepper: </label>
+                        <input type="number" id="green pepper" name="green pepper" value="0" min="0" max="3">
+
+                        <label for="onion">Onion: </label>
+                        <input type="number" id="onion" name="onion" value="0" min="0" max="3">
+
+                        <label for="pineapple">Pineapple: </label>
+                        <input type="number" id="pineapple" name="pineapple" value="0" min="0" max="3">
+
+                        <label for="broccoli">Broccoli: </label>
+                        <input type="number" id="broccoli" name="broccoli" value="0" min="0" max="3">
+
+                        <label for="tofu">Tofu: </label>
+                        <input type="number" id="tofu" name="tofu" value="0" min="0" max="3">
+                    </div>
+                </form>
+                <button id="addPizza">Add to Cart</button>
+
+                <div class="cart">
+                    
+                </div>
+            </section>
+        </main>
+
+        <!-- Professional footer -->
+        <footer>
+            <h6>Thanks for choosing Pizza Time!</h6>
+        </footer>
+    </body>   
+</html>
