@@ -10,7 +10,7 @@
                 "Ingredients" : ["Peach Syrup", 
                                 "Mango chunks", 
                                 "Vanilla Base"],
-                "image" : "peach-mango.svg"
+                "image" : "https://richard-leblanc.github.io/GithubRepo/Term3Codes/JavascriptCode/week11JSON/images/peach-mango.svg"
             }, {
                 "Name" : "Chocolate Mint",
                 "Calories" : 300,
@@ -18,6 +18,14 @@
                 "Ingredients" : ["Chocolate Syrup",
                                 "PepperMint Sprinkles",
                                 "Vanilla Base"],
-                "image": "chocolate-mint.svg"
-            }]
+                "image": "https://richard-leblanc.github.io/GithubRepo/Term3Codes/JavascriptCode/week11JSON/images/chocolate-mint.svg"
+            },{
+                "Name" : "Strawberry Sprinkle",
+                "Calories" : 360,
+                "Type" : "Ice-cream",
+                "Ingredients" : ["Rainbow Sprinkles",
+                                "Strawberry Base"],
+                "image": "https://richard-leblanc.github.io/GithubRepo/Term3Codes/JavascriptCode/week11JSON/images/chocolate-mint.svg"
+            }
+        ]
 }
