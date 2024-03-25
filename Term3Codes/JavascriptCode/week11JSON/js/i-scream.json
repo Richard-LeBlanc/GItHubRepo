@@ -1,5 +1,5 @@
 {
-    "Company Name" : "i-scream",
+    "Company Name" : "i-scream-Company",
     "Head Office" : "Wyoming",
     "established" : 2024,
     "active" : true,
@@ -26,6 +26,23 @@
                 "Ingredients" : ["Rainbow Sprinkles",
                                 "Strawberry Base"],
                 "image": "https://richard-leblanc.github.io/GithubRepo/Term3Codes/JavascriptCode/week11JSON/images/chocolate-mint.svg"
+            },{
+                "Name" : "Rocky Road",
+                "Calories" : 420,
+                "Type" : "Candied Ice-Cream",
+                "Ingredients" : ["Marshmallow",
+                                "Chocolate Chunk",
+                                "Vanilla Base"],
+                "image": "https://richard-leblanc.github.io/GithubRepo/Term3Codes/JavascriptCode/week11JSON/images/ice-cream-xtra1.svg"
+            },{
+                "Name" : "Resse Fudge",
+                "Calories" : 425,
+                "Type" : "Candied Ice-Cream",
+                "Ingredients" : ["Resse PeanutButter Cups",
+                                "Chocolate Fudge",
+                                "Chocolate Vanilla Swirl"],
+                "image": "https://richard-leblanc.github.io/GithubRepo/Term3Codes/JavascriptCode/week11JSON/images/ice-cream-xtra2.svg"
             }
+
         ]
 }

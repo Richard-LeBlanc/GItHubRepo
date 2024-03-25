@@ -54,9 +54,9 @@ function showTopFlavors(jsonData){
         let p2 = document.createElement("p");
         let list = document.createElement("ul");
     // STEP 10f: Set the textContent property for each of the above elements (except the UL), based on the JSON content
-        h2.textContent = topFlavours[i].name;
-        p1.textContent = "Calories: " + topFlavours[i].calories;
-        p1.textContent = "Type: " + topFlavours[i].type;
+        h2.textContent = topFlavours[i].Name;
+        p1.textContent = "Calories: " + topFlavours[i].Calories;
+        p1.textContent = "Type: " + topFlavours[i].Type;
         image.setAttribute("src", topFlavours[i].image);  //  path to the image
     // STEP 10g: Build a loop for the ingredients array in the JSON
         let ingredients = topFlavours[i].Ingredients;
