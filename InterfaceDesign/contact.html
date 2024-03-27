@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact us</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="nofollow, noindex">
+        <meta name="description" content="contact information regarding Die Peacefully">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- Let's normalize our css -->
+        <link rel="stylesheet" href="./css/normalize.css">
+
+        <!-- Using js to adjust classes in order to create more a sophisticated design -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://kit.fontawesome.com/f41e192330.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./js/custom-js.js"></script>
+
+    </head>
+
+    <body>
+        <header class="header">
+            <div>
+                <a href="index.html"><img src="./img/logo.png" alt="Die Peacefully logo"></a>
+            </div>
+            <nav class="nav">
+                <menu>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./product.html">Products</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </menu>
+            </nav>
+            <nav class="mobile-nav">
+                <input type="checkbox" class="mobile-check">
+                <span></span>
+                <span></span>
+                <span></span>
+                <menu class="mobile-menu">
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./product.html">Products</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </menu>
+            </nav>
+        </header>
+
+        <main>
+            <section class="contact">
+                <h1>Contact Details:</h1>
+                <div>
+                    <div>
+                        <h3>We're here for you</h3>
+                        <p>Reach out to us by email. We offer premium customer support and reach out for orders or issues in no time at all.</p>
+                        <a href="#">diepeacefully@gmail.org</a>
+                    </div>
+                    <div>
+                        <h3>Let us know how we can help</h3>
+                        <form action="contact.html" method="post">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" name="firstName" id="firstName" required>
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" name="lastName" id="lastName" required>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" required>
+                            <label for="comment">Comments:</label>
+                            <textarea name="comments" placeholder="comments" id="comment"></textarea>
+                            <input type="submit" value="submit" name="submit">
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div>
+                <div>
+                    <h6>Thanks for stopping by:</h6>
+                    <p>For more info on our merch join us on twitter, or facebook where we show our love for all of the people who keep this site ticking. You'll see funny videos from time to time. Otherwise, we always adore your shows of appreciation.</p>
+                </div>
+            
+                <div class="socials">
+                    <h6>follow us @</h6>
+                    <a href="#"><i class="fa-brands fa-facebook"> Facebook</i></a> 
+                    <a href="#"><i class="fa-brands fa-twitter"> Twitter</i></a> 
+                    <a href="#"><i class="fa-brands fa-discord"> Discord</i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"> YouTube</i></a>
+                </div>
+            
+                <div class="altSiteNav">
+                    <a href="./about.html"><h6>About</h6></a>
+                    <a href="./product.html"><h6>Product</h6></a>
+                    <a href="./contact.html"><h6>Contact</h6></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

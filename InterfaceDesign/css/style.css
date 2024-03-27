@@ -1,0 +1,820 @@
+/* custom font set up */
+p, a, li{
+    font-weight: 400;
+    font-size: 1.5em;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    position: relative;
+    
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+}
+h1{
+    width: 60%;
+    font-weight: bold;
+    font-size: 7em;
+    color: #EB6314;
+    margin-right: 150px;
+    margin-bottom: 200px;
+}
+form{
+    text-align: left;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, .1);
+    border-radius: 8px;
+}
+label{
+    display: block;
+    width: 100%;
+    padding: 15px;
+}
+input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input{
+    background-color: #e0e0e0;
+    color: #Eb6314;
+    border: #E16314 solid 2px;
+}
+input[type="submit"] {
+    background-color: #0e0e0e;
+    width: 89%;
+    color: #Eb6314;
+    border: #EB6314 2px solid;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #2b2929;
+    outline: #0f0f0f 2px solid;
+    color: #Eb6314;
+    border: #EB6314 2px solid;
+    cursor: pointer;
+}
+textarea{
+    width: 80%;
+    height: 95px;
+    padding: 20px;
+    border: 2px solid #EB6314;
+    resize: none;
+}
+body{
+    margin: 0;
+}
+header{
+    background-color: #f4f4f4;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 125px;
+    z-index: 999;
+    display: flex;
+    transition: all .35s ease-out;
+}
+header div{
+    height: 100%;
+    width: auto;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+header div a img{
+    height: 100%;
+    width: auto;
+}
+header nav menu{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-right: 10px;
+}
+header nav menu li{
+    padding: 0px 10px;
+    transition: all .25s ease-in;
+}
+header nav menu li a{
+    text-decoration: none;
+    color: #0e0e0e;
+}
+header:hover{
+    height: 125px;
+    background-color: #f4f4f4;
+    transition: all .5s ease-in;
+}
+header .mobile-nav{
+    display: none;
+}
+header .mobile-nav .mobile-menu li a{
+    display: block;
+    margin-left: -40px;
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 1.3em;
+    text-shadow: 2px 3px 2px #0f0f0f;
+    padding: 13px;
+    text-align: start;
+}
+header .mobile-nav .mobile-menu{
+    display: none;
+    background-color: #e0e0e0;
+    width: 125px;
+    height: 200px;
+    position: fixed;
+    top: 125px;
+    right: -125px;
+    transition: .5s all ease-in;
+}
+header .mobile-nav .mobile-check{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 46px;
+    top: 26px;
+    opacity: 0;
+    z-index: 5;
+}
+header .mobile-nav span{
+    height:10px;
+    width: 60px;
+    background-color: #0e0e0e;
+    position: fixed;
+    top: 55px;
+    right: 50px;
+    transition: 1.2s all ease-out;
+}
+header .mobile-nav span:nth-child(2){
+    top: 30px;
+}
+header .mobile-nav span:nth-child(4){
+    top: 80px;
+}
+.scrolledHeader{
+    height: 75px;
+    background-color: rgba(235, 99, 20, .5);
+    transition: all 1.2s linear;
+}
+.scrolledHeader .mobile-nav span:nth-child(2){
+    height: 4px;
+    width: 35px;
+    top: 30px;
+    right: 45px;
+}
+.scrolledHeader .mobile-nav span:nth-child(3){
+    height: 4px;
+    width: 35px;
+    top: 45px;
+    right: 45px;
+}
+.scrolledHeader .mobile-nav span:nth-child(4){
+    height: 4px;
+    width: 35px;
+    top: 60px;
+    right: 45px;
+}
+.scrolledHeader .mobile-nav .mobile-check{
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    right: 41px;
+    top: 27px;
+}
+.scrolledHeader .mobile-nav .mobile-menu{
+    display: none;
+    width: 125px;
+    height: 200px;
+    position: fixed;
+    top: 75px;
+    right: -125px;
+    transition: .5s all ease-in;
+    background-color: #e0e0e0;
+}
+header .mobile-nav .mobile-check:checked ~ .mobile-menu{
+    display: block;
+    width: 125px;
+    height: 200px;
+    background-color: #E13b26;
+    position: fixed;
+    top: 125px;
+    transform: translateX(-125px);
+    transition: .2s all ease-in;
+    box-shadow: 7px 1px 10px rgb(0, 0, 0);
+}
+header .mobile-nav .mobile-check:checked ~ span{
+    top: 113px;
+    width: 125px;
+    right: 10px;
+    height: 4px;
+    color: #E16314;    
+}
+header .mobile-nav .mobile-check:checked ~ span::before,
+header .mobile-nav .mobile-check:checked ~ span::after{
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #0e0e0e;
+}
+.scrolledHeader .mobile-nav .mobile-check:checked ~ .mobile-menu{
+    display: block;
+    width: 125px;
+    height: 200px;
+    background-color: #E13b26;
+    position: fixed;
+    top: 75px;
+    transform: translateX(-125px);
+    transition: 1.2s all ease-in;
+    box-shadow: 7px 1px 10px rgb(0, 0, 0);
+}
+.scrolledHeader .mobile-nav .mobile-check:checked ~ span{
+    top: 65px;
+    right: 0px;
+    width: 125px;
+    height: 4px;
+    color: #E16314;
+}
+
+@keyframes bounce {
+    from{transform: translateY(3px);}
+    to{transform: translateY(-3px);}
+}
+header nav menu li:hover{
+    animation: bounce;
+    animation-duration: 1s;
+    animation-delay: .1s;
+}
+header nav menu li a:hover{
+    color: #EB6314;
+    font-size: 1.65em;
+}
+.scrolledHeader nav menu li a{
+    font-size: 1em;
+}
+header 
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 580px;
+    width: 100%;
+    background-image: url("../img/logo.png");
+}
+footer > div{
+    background-color: rgba(0, 0, 0, .8);
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    height: 95%;
+    width: 98%;
+    align-items: center;
+    justify-content: center;
+}
+footer > div div p,
+footer > div div a
+{
+    font-size: 24px;
+    text-decoration: none;
+    color: #f4f4f4;
+    width: 80%;
+    margin: auto;
+}
+footer > div div h6,
+footer > div div a h6{
+    text-decoration: none;
+    color: #f4f4f4;
+    width: 80%;
+    padding: 46px 10px;
+    margin: 15px
+}
+.footLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+}
+.footLogo img{
+    height: 100%;
+    width: auto;
+}
+.socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+main{
+    margin-top: 125px;
+}
+/* Place a translucent layer over part of the masthead*/
+.masthead{
+    height: 85.5vh;
+    width: 100%;
+    background-image: url("../img/Shadow-of-the-Dragon-Queen-Dragonlance.png");
+    background-size: cover;
+    background-position: center;
+}
+.masthead div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(121, 111, 116, .8);
+    clip-path: polygon(0 0, 100% 0%, 60% 100%, 0 100%);
+}
+.greetings > h2{
+    opacity: 1;
+    color: #0e0e0e;
+    position: absolute;
+    top: 90vh;
+    font-weight: 700;
+    font-size: 5em;
+    letter-spacing: 10px;
+    z-index: 0;
+    text-shadow: 0px 0px 10px #e0e0e0;
+}
+.sections{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 87.5vh;
+    width: 100%;
+    background-color: #0e0e0e;
+    border-top: #Eb6314 solid 10px;
+    border-bottom: #EB6314 solid 10px;
+}
+.sections > div{
+    height: 75%;
+    width: 86%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .greetings > div{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: 50px;
+}
+.greetings > div .gradientBorder{
+    width: 95%;
+    height: 100%;
+}
+.gradientBorder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(bottom right, rgba(192, 192, 192, .4), rgba(192, 192, 192, .7));
+    background: -moz-linear-gradient(bottom right, rgba(192, 192, 192, .4), rgba(192, 192, 192, .7));
+    background: linear-gradient(to top left, rgba(192, 192, 192, .4), rgba(192, 192, 192, .7));
+    border-radius: 2%;
+    box-shadow: 10px 10px 20px rgba(255, 255, 255, 1);
+}
+/* I wanted to use an absolute position for the images to appear in this container. I saw that in order to do this, one would need to have the parent element set absolutely; Otherwise, there are a few more options. I have forgotten most already but contain:layout seemed simplest to comprehend for me. */
+.greetings > div > .gradientBorder:first-child{
+    margin-right: 20px;
+    contain: layout;
+}
+.gradientBorder > div{
+    background-color: #f4f4f4;
+    height: 97%;
+    width: 97%;
+    border-radius: 1%;
+    border: #0e0e0e solid 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.greetings div .gradientBorder:nth-child(2) > div{
+    text-align: center;
+    height: 97%;
+    width: 97%;
+}
+.greetings div .gradientBorder:nth-child(2) > div > h2{
+    font-size: 45px;
+    font-weight: 500;
+    text-shadow: 2px 4px 5px rgb(192, 192, 192);
+}
+.greetings div .gradientBorder:nth-child(2) > div > p{
+    margin: 0px 25px;
+    letter-spacing: 1.25px;
+    font-size: 1.2em;
+}
+.greetings div .gradientBorder:nth-child(2) > div > p::first-line{
+    font-size: 1.25em;
+    kerning: 10px;
+    font-weight: 500;
+}
+.greetings div .gradientBorder > div > h2 > span{
+    color: #EB6314;
+    font-size: 48px;
+}
+.greetings div .gradientBorder > div > p > span{
+    color: #EB6314;
+    font-size: 1.25em;
+}
+.menuImg{
+    display: none;
+    position: absolute;
+    width: 38%;
+    height: auto;
+    right: 7%;
+    top: 30%;
+}
+.categoryMenu{
+    text-align: start;
+    list-style: none;
+}
+.categoryMenu p a{
+    text-decoration: none;
+    color: #0e0e0e;
+}
+.menuTitle{
+    height: 50px;
+    border-bottom: solid 4px #0e0e0e;
+    width: max-content;
+    font-size: 1.7em;
+    margin: 10px;
+    margin-left: 20px;
+    transition: all .4s ease-in;
+}
+.menuTitle:hover{
+    background-color: #0e0e0e;
+    border: #EB6314 4px solid;
+    transform: scale(1.1);
+    box-shadow: 2px 4px 2px rgba(192, 192, 192, .8);
+    transition: all .4s ease-out;
+}
+.menuTitle:hover a{
+    color: #EB6314;
+}
+.shrinkP{
+    color: #0f0f0f;
+    transform: scale(.85);
+    transition: all .4s ease-out;
+}
+.menuTitle:hover + img{
+    display: block;
+    transition: all .4s ease-out;
+    border-radius: 2%;
+    border: #EB6314 solid 4px;
+}
+.categoryMenu > h3{
+    opacity: 1;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    max-width: 30%;
+}
+.menuTitle:hover ~ h3{
+    opacity: 0;
+}
+.deals{
+    background-image: url("../img/background.jpeg");
+    background-size: contain;
+    height: 95vh;
+    flex-direction: column;
+}
+.deals .gradientBorder{
+    height: 134%;
+    position: relative;
+    bottom: 102px;
+    z-index: 1;
+    text-shadow: 10px 10px 0px rgba(0, 0, 0, .5);
+}
+.deals .gradientBorder div{
+    align-items: center;
+}
+.deals h5{
+    color: #e0e0e0;
+    font-size: 3.7em;
+    text-shadow: 4px 2px 5px rgba(0, 0, 0, .5);
+    position: relative;
+    bottom: 69px;   
+}
+.deals a{
+    text-decoration: none;
+    height: 60px;
+    width: 150px;
+    text-align: center;
+    border-radius: 11%;
+    background-color: #0E0F58;
+    border: #E13b26 solid 3px;
+}
+main .deals div iframe{
+    width: 95%;
+    height: 95%;
+}
+main .deals a p{
+    color: #Eb6314;
+}
+.deals a,
+.deals a p{
+    position: relative;
+    bottom: 25px;
+}
+.deals a:hover{
+    background-color: #0E0F8e;
+}
+.deals a:hover p{
+    font-size: 1.6em;
+    bottom: 29px;
+    letter-spacing: 1.5px;
+}
+.main-about section{
+    display: flex;
+}
+.main-about section:not(:first-child),
+.main-about section:not(:first-child) ul li{
+    padding: 5px 20px;
+    letter-spacing: 1.5px;
+}
+.main-about section:not(:first-child) div:first-child{
+    margin-right: 2%;
+}
+.main-about section:not(:first-child) div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.main-about section div img{
+    width: 28vw;
+    height: auto;
+    margin: 20px 0;
+}
+.main-about section .about-text{
+    padding: 2%;
+}
+main .contact{
+    text-align: center;
+}
+main .contact h1{
+    margin: 20px 0;
+    font-weight: bold;
+}
+main .contact > div{
+    width: 95%;
+}
+main .contact div h3{
+    margin: 0;
+    padding: 20px;
+    font-weight: bold;
+    color: #0e0e0e;
+    text-shadow: 2px 4px 2px rgba(110, 110, 110, .4);
+}
+main .contact > div div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+main .contact > div div p{
+    width: 30%;
+    margin: 0px;
+    padding: 50px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+main .contact > div div a{
+    text-decoration: none;
+    color: #0e0e0e;
+}
+main .contact > div div a:hover{
+    color: #837878;
+}
+.main-product section:first-child{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.main-product section:first-child h1,
+.main-product section:first-child h2{
+    margin: 20px 0;
+    width: 100%;
+}
+.main-product section h3{
+    text-align: center;
+    font-size: 5em;
+    margin: 0;
+    padding: 20px;
+}
+.main-product section:nth-child(2n) h3{    
+    color: #E16314;
+    outline: rgba(190, 190, 190, .5);
+    text-shadow: 2px 2px 6px rgb(62, 1, 1);
+}
+.main-product section:nth-child(2n+1) h3{
+    color: #ffffff;
+    outline: rgba(190, 190, 190, .5);
+    text-shadow: 2px 2px 6px rgb(62, 1, 1);
+}
+.main-product section:nth-child(2n){
+    background-color: #f4f4f4;
+}
+.main-product section:nth-child(2n+1){
+    background-color: rgb(202, 105, 20);
+}
+.main-product section > div{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    flex-wrap: wrap;
+    width: 95%;
+    height: 95%;
+    padding: 10px;
+    margin: auto;
+    background-color: rgba(192, 192, 192, .7);
+}
+.main-product section > div > div{
+    width: 53%;
+    height: auto;
+    margin: 8% auto;
+    padding: 51px;
+    background-color: #f4f4f4;
+}
+.main-product section{
+    margin: 0;
+}
+.main-product section > div > div{
+    contain: layout;
+    text-align: center;
+
+}
+.main-product section div a{
+    display: block;
+    width: 100%;
+    margin: 0;
+    height: 40px;
+    position: relative;
+    bottom: 0px;
+    background-color: #0e0e0e;
+    color: #E16314;
+    border: #E16314 2px solid;
+    cursor: pointer;
+}
+.main-product section div a:hover{
+    background-color: #2b2929;
+    outline: #0e0e0e 2px solid;
+}
+.main-product section div img{
+    width: 85%;
+    height: auto;
+}
+.main-product > section:first-child > h1{
+    color: #f4f4f4;
+    text-shadow: 2px 5px 12px rgba(51, 41, 35, 0.5);
+}
+main .contact > h1{
+    font-size: 4em;
+    text-shadow: #0f0f0f 2px 2px 2px;
+}
+@media screen and (max-width: 1200px) {
+    .main-about section:first-child h1{
+        font-size: 3.5em;
+    }
+}
+@media screen and (max-width: 1024px) {
+    h1{
+        font-size: 3.5em;
+    }
+    .greetings h2{
+        font-size: 2em;
+        top: 96vh;
+    }
+    p, a, li{
+        font-size: 1.2em;
+    }
+    main .deals a p{
+        font-size: 1.9em;
+    }
+    main .contact > div div p {
+        width: 50%;
+        padding: 20px 0;
+    }
+}
+@media screen and (max-width: 768px){
+    main > .contact > h1{
+        font-size: 2em;
+    }
+    main .masthead h1{
+        font-size: 2.9em;
+    }
+    main .greetings > div{
+        grid-template-columns: 100%;
+        margin: 50px 0;
+    }
+    main .greetings > div .gradientBorder{
+        margin: 50px 0;
+        min-height: 70vh;
+        width: 100%;
+    }
+    main .greetings > div .gradientBorder:last-child{
+        order: 1;
+    }
+    main .greetings > div .gradientBorder:first-child{
+        order: 2;
+        margin: 50px 0 0 0;
+    }
+    .greetings h2{
+        font-size: 2em;
+        top: 96vh;
+        z-index: 5;
+    }
+    footer > div div p, 
+    footer > div div a{
+        font-size: 20px;
+    }
+    footer > div div h6,
+    footer > div div a h6{
+    width: 80%;
+    padding: 59px 10px;
+    margin: 1px;
+    }
+    .main-product > section > div{
+        grid-template-columns: 100%;
+    }
+    .main-about > section .gradientBorder h1{
+        font-size: 4em;
+    }
+    main .contact > div div p {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .main-about section:not(:first-child) {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-about section:not(:first-child) div img{
+        width: 70vw;
+    }
+    .main-about section:nth-child(3) div:first-child{
+        order: 2;
+    }
+    footer > div div h6, footer > div div a h6 {
+        width: 80%;
+        padding: 20px 10px;
+        margin: 1px;
+    }
+    main .masthead h1{
+        font-size: 2.5em;
+        margin-right: 87px;
+    }
+    footer > div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer > div > div{  
+        min-width: 44%;
+    }
+    footer > div div h6{
+        font-size: 1.2em;
+    }
+    .main-about > section .gradientBorder h1{
+        font-size: 2.5em;
+    }
+}
+@media screen and (max-width: 320px) {
+    main .masthead div{
+        clip-path: none;
+        background-color: rgba(121, 111, 116, .4);
+        top: 31px;
+    }
+    main .masthead div h1{
+        font-size: 3em;
+        text-align: center;
+        margin-top: 158px;
+        margin-right: 50px;
+    }
+    main .deals h5{
+        font-size: 2.9em;
+    }
+    header .nav{
+        display: none;
+    }
+    header .mobile-nav{
+        display: block;
+    }
+    p, li, a {
+        font-size: 20px;
+        padding: 0 2px;
+    }
+}
