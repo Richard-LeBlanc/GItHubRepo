@@ -38,7 +38,7 @@ class Pizza{
 
     calculatePrice(){
         //  Pan dough is 2 dollars more thick crust is 1 dollar more
-        const doughCharge = (this.dough == 'pan' ? 2 : (this.dough == 'thick' ? 1 : 0))
+        const doughCharge = (this.dough == 'Pan' ? 2 : (this.dough == 'Thick' ? 1 : 0))
 
         //  Sauce is 1 dollar for every serving past one
         const sauceCharge = (this.getToppingQuantity(this.sauce) > 1 ? (this.getToppingQuantity(this.sauce) - 1): 0);
@@ -60,7 +60,7 @@ class Pizza{
 
     //  creates a string that describes the dough and sauce
     createParagraph(){
-        let message = (`${this.dough} ${(this.dough == 'pan') ? "pizza" : "crust pizza"} `);
+        let message = (`${this.dough} ${(this.dough == 'Pan') ? "pizza" : "crust pizza"} `);
         if (Object.keys(this.sauce).length > 0){
             Object.keys(this.sauce).forEach(x =>{
                 if (Object.keys(this.sauce)[0] == x){
