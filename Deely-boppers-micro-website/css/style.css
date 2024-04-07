@@ -1,0 +1,324 @@
+/*Global font Design*/
+p, a, figcaption{
+    font-size: 1.4em;
+    font-family: 'Cormorant Garamond', serif;
+}
+a{
+    color: #e0e0e0;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Martel', serif;
+    margin: 20px;
+}
+/* Header Design*/
+header{
+    grid-area: h;
+    display: flex;
+    height: 125px;
+    width: auto;
+    margin: 2px;
+    padding: 5px;
+}
+header > div{
+    height: 120px;
+    width: auto;
+}
+header > div > img{
+    height: 120px;
+    width: auto;
+}
+header > h1{
+    flex-grow: 1;
+    text-align: center;
+}
+/*Style a navigation menu*/
+.navbar{
+    background-color: #0e0e0e;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-icon{
+    /* Hide the menu icon on larger screens */
+    display: none;
+}
+.menu-icon > span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #e0e0e0;
+    margin: 5px;
+}
+.menu{
+    display: flex;
+    list-style: none;
+}
+.menu > li{
+    margin-right: 20px;
+}
+.menu > a{
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 18px;
+}
+/*Footer Design */
+body > footer{
+    grid-area: f;
+    display: flex;
+}
+body > footer > div{
+    width: 30%;
+    height: 160px;
+}
+body > footer > div > img{
+    height: 100%;
+    width: auto;
+}
+h6{
+    font-size: 1.2em;
+    margin: 0px 15px;
+    padding: 5px;
+}
+body > footer > nav{
+    width: 20%;
+}
+body > footer > nav > menu{
+    list-style: none;
+    margin: 0;
+}
+body > footer > nav > menu > li{
+    margin: 6px;
+}
+body > footer > nav > menu > li > a{
+    color: #0e0e0e;
+}
+
+body{
+    background-color: #e0e0e050;
+    display: grid;
+    /*Layout the pages to have a header at the top and footer at the bottom, main with an aside between them.*/
+    grid-template-areas: "h h" 
+                         "m a"
+                         "f f";
+    /*An appropriate size was tested for the aside vs main content.*/
+    grid-template-columns: 85% 15%;
+    grid-template-rows: auto;
+    margin:2px;
+}
+body > main{
+    grid-area: m;
+}
+body > aside{
+    grid-area: a;
+}
+body > aside > section{
+    margin: 20px 5px;
+}
+/*Create the mastheads space and features*/
+.masthead{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: auto;
+    padding: 100px;
+    background-image: url("../img/background.png");
+    background-size: cover;
+}
+.masthead > h2{
+    font-size: 3em;
+    color:blanchedalmond;
+    text-align: center;
+}
+.masthead >  p{
+    font-size: 1.7em;
+    color: #e0e0e0;
+    text-align: center;
+}
+.masthead > ul{
+    margin-left: 60%;
+}
+.masthead > ul > li{
+    color:#e0e0e0;
+    font-size: 1.4em;
+}
+/*Staggers the sections to clearly divide them and give them structure.*/
+.Home-sections:nth-child(odd){
+    background-color: #e0e0e0a7;
+}
+.Home-sections{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 40px;
+    text-align: center;
+    height: 75vh;
+    width: auto;
+}
+/*Made paragraphs behave similarly for a consistent atmosphere throughout the webpage*/
+.paragraph{
+    display: flex;
+}
+.paragraph > img{
+    width:auto;
+    height: 100%;
+}
+.About-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.About-Articles:nth-child(odd){
+    background-color: #e0e0e0a7;
+}
+.About-Articles{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 40px;
+    text-align: left;
+}
+.About-Articles > h3{
+    text-align: left;
+}
+.About-Articles:nth-child(1) > img{
+    height: auto;
+    width: 80%;
+}
+.stephenImage{
+    display: block;
+    margin: 2px;
+    height: auto;
+    width: 25%;
+}
+/*Product page layout*/
+.productSection:nth-child(even){
+    background-color: #e0e0e0;
+}
+.productSection{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: auto;
+    width: 85%;
+    margin: 120px 0px;
+}
+.productSection > div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.productSection > div > img{
+    width: auto;
+    height: 250px;
+    padding: 15px;
+}
+.productSection > p{
+    text-align: center;
+}
+
+/*General layout Contact us page*/
+.Contact-us{
+    display: flex;
+    width: 100%;
+    margin: 50px;
+    padding: 50px;
+}
+.Contact-us > div{
+    width: 49%;
+    padding: 20px;
+}
+.Contact-us > div > p{
+    font-size: 15px;
+    margin:0px;
+    padding:3px;
+}
+/*Give the contact form same spacing to organize it better.*/
+.contact-form{
+    margin-bottom: 15px;
+}
+.contact-form:nth-child(1){
+    margin-top: 15px;
+}
+label{
+    display: block;
+    margin-bottom:5px;
+}
+input, textarea{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #0e0e0e;
+    border-radius: 5px;
+}
+button{
+    padding: 8px 15px;
+    background-color: #353434;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.highlight{
+    color: #650788;
+    font-size: 1.6em;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+@media screen and (max-width: 760px){
+    .menu{
+        display: none; /* Hide the menu on small screens by default */
+    }  
+    .menu.active{
+        display: flex; /* Show the menu when active */
+        flex-direction: column;
+        position: absolute;
+        top: 12%;
+        left: 75%;
+        width: 20%;
+        background-color: #0e0e0e;
+        padding: 10px;
+    }
+  
+    .menu.active > li{
+        margin-right: 0; /* Remove the margin for list items in the active menu */
+    }
+  
+    .menu-icon{
+        display: block; /* Show the menu icon on small screens */
+    }
+    body{
+        display: grid;
+        /*Layout the pages to have a header at the top and footer at the bottom, main with an aside between them.*/
+        grid-template-areas: "h h" 
+                             "m m"
+                             "a a"
+                             "f f";
+        /*An appropriate size was tested for the aside vs main content.*/
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        margin:2px;
+    }
+    body > aside > section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    body > aside > p{
+        width: 33%;
+    }
+  }
+  
+  @media screen and (max-width: 620px) {
+    .masthead > h2{
+        /*Ensures the text doesn't flow out of the Mastheads space*/
+        font-size: 2em;
+    }
+  }

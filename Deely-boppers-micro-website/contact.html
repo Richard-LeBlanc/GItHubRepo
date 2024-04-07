@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="nofollow, noindex">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Home page of the deely-bopper website">
+
+        <!--Google Fonts in use-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Martel:wght@700&display=swap" rel="stylesheet">
+
+        <title>Deely-Bopper Contact info/form</title>
+        <!--Css file link-->
+        <link rel="stylesheet" href="./css/style.css">
+         <!--JQuery link-->
+        
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+         <!--Our JS file-->
+         <script type="text/javascript" src="./js/javascript.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <img src="./img/logo.png" alt="Deely bopper logo">
+            </div>
+            <h1>Deely-Bopper</h1>
+            <nav class="navbar">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html" class="hoverLink">Home</a></li>
+                    <li><a href="about.html" class="hoverLink">About</a></li>
+                    <li><a href="product.html" class="hoverLink">Product</a></li>
+                    <li><a href="contact.html" class="hoverLink">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="Contact-us">
+                <div>
+                    <h2>Contact Info.</h2>
+                    <p>DeelyBop@gmail.com</p>
+                    <p>or call toll free</p>
+                    <p>1-800-765-4321</p>
+                    <p>anytime between 5am-9pm PST</p>
+                </div>
+                <div>
+                    <p>Please enter your information and we will get back to you as soon as possible.</p>
+
+                    <form action="userData.php" method="post">
+                        <div class="contact-form">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName" required autofocus placeholder="John" maxlength="14">
+                        </div>
+
+                        <div class="contact-form">
+                            <label for="lastName">Surname:</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Doe" maxlength="14">                     
+                        </div>
+
+                        <div class="contact-form">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                        </div>
+                                              
+                        <div class="contact-form">
+                            <label for="mailing_address">Mailing address:</label>
+                            <input type="text" id="mailing_address" name="address" placeholder="123 william PO box 1234"><br><br>
+                        </div>
+                        
+                        <div class="contact-form">
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="555-555-5555" required>                       
+                        </div>
+
+                        <div class="contact-form">
+                            <label for="comments">Comments:</label><br>
+                            <textarea name="comment" id="comments" placeholder="Enter text here..."></textarea>                     
+                        </div>
+
+                        <div class="contact-form">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        
+        <!--Footer containing another navigation of the site. With dummy social media links added.-->
+        <footer>
+            <div>
+                <img src="./img/logo.png" alt="Deely-Bopper's logo">
+            </div>
+            <nav>
+                <h6>Navigation</h6>
+                <menu>
+                    <li><a href="index.html" class="hoverLink">Home</a></li>
+                    <li><a href="about.html" class="hoverLink">About</a></li>
+                    <li><a href="product.html" class="hoverLink">Product</a></li>
+                    <li><a href="contact.html" class="hoverLink">Contact us</a></li>
+                </menu>
+            </nav>
+            <nav>
+                <h6>Socials</h6>
+                <menu>
+                    <li><a href="#" class="hoverLink">Twitter</a></li>
+                    <li><a href="#" class="hoverLink">Facebook</a></li>
+                    <li><a href="#" class="hoverLink">Instagram</a></li>
+                </menu>
+            </nav>
+        </footer>
+    </body>
+</html>
