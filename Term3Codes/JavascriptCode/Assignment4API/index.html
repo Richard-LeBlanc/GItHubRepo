@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Job Search Tool</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Help individuals find job openings relevant to their career choice and experience">
+        <meta name="robots" content="nofollow, noindex">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/script.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <h1>Having Difficulty Finding Relevant Job Postings?</h1>
+                <h2>Get results fast, find jobs in your field, find jobs looking for individuals with your level of experience!</h2>
+            </div>
+            <img src="./img/jobSearch.jpeg" alt="Job searches shouldn't be confusing">
+        </header>
+        <main>
+            <section>
+                <div>
+                    <h3>Just Complete Your Information and Hit Search!</h3>
+                    <p>No fuss, no muss. Results in seconds!</p></div>
+                <form>
+                    <label for="jobTitle">Job title:</label>
+                    <input type="text" name="jobTitle" id="jobTitle" placeholder="Software Developer">
+                    <label for="state">State or province:</label>
+                    <input type="text" name="state" id="state" placeholder="Ontario">
+                    <label for="country">Country:</label>
+                    <input type="text" name="country" id="country" placeholder="Canada">
+                    <label for="date_posted">Recency of posting:</label>
+                    <select name="date_posted" id="date_posted">
+                        <option value="none">select an option</option>
+                        <option value="all">All Results</option>
+                        <option value="today">Today</option>
+                        <option value="3days">Last 3 days</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                    </select>
+                    <label for="requirements">Job requirements:</label>
+                    <select name="requirements" id="requirements">
+                        <option value="none">select an option</option>
+                        <option value="under_3_years_experience">&#60; 3 Years of Experience</options>
+                        <option value="more_than_3_years_experience">&#62; 3 Years of Experience</options>
+                        <option value="no_experience">No Experience Required</option>
+                        <option value="no_degree">No Degree</option>
+                    </select>
+                    <label for="position">Job type:</label>
+                    <select name="position" id="position">
+                        <option value="none">select an option</option>
+                        <option value="FULLTIME">Full-Time</option>
+                        <option value="PARTTIME">Part-Time</option>
+                        <option value="CONTRACTOR">Contract</option>
+                        <option value="INTERN">Intern/Coop</option>
+                    </select>
+                    <input type="submit" id="submit" value="submit">
+                </form>
+                <div>
+                    <p>Job advertisement clutter is keeping you from your dream job. With our easy to use system, tell us what you want and we'll find it for you. It's as easy as that, all you need to know is your location and desired position. </p>
+                    <p>Adding your level of experience is completely optional, but we recommend you fill out the entire form as it will give you the best results possible!</p>
+                    <button>Share!</button>
+                </div>
+            </section>
+            <section class="pagination hidden">
+                <h3>Here are Your Results</h3>
+                
+            </section>
+            
+        </main>
+    </body>
+</html>
