@@ -44,7 +44,7 @@ function displayResults(json) {
         section.removeChild(section.firstChild);
     };
     // STEP 6: Create the variable articles to capture the articles from the JSON object
-    let articles;
+    let articles = json.response.docs;
 
     if (articles.length === 0) {
         const para = document.createElement('p');

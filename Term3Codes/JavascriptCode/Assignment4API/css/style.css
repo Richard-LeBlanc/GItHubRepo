@@ -94,9 +94,77 @@ section > div:nth-child(3){
 }
 .pagination{
     border: solid 5px #0e0e0e; 
+    width: 100%;
 }
 .hidden{
     display: none;
+}
+.modal{
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    z-index: 1;
+    width: 90%;
+    margin: auto;
+    height: 90dvh;
+    overflow: auto;
+    background-color: #e0e0e0;
+}
+.modal article{
+    position: relative;
+    top: 50%;
+}
+.modal > button{
+    background-color: #d8c5c5;
+    color: #0e0e0e;
+    position: fixed;
+    right: 6%;
+    top: 6%;
+    font-size: 1.6em;
+    font-weight: 900;
+    margin: 5px;
+    border: solid .5px #0e0e0e;
+    display: block;
+    min-width: fit-content;
+    width: fit-content;
+    height: fit-content;
+    border: solid 1px #827a7a;
+}
+.pagination menu{
+    display: flex;
+    position: fixed;
+    bottom: 4%;
+    background-color: #e0e0e0;
+    z-index: 2;
+}
+.pagination h3{
+    display: flex;
+    position: absolute;
+    top: 0%;
+}
+.pagination article p{
+    padding: 20px;
+    margin-bottom: 5%;
+}
+.pagination menu p{
+    margin: 3px;
+    padding: 5px;
+    min-width: fit-content;
+    min-height: fit-content;
+    font-size: 1.6em;
+    color: #4a78c6;
+    border-bottom: solid 4px #4a78c6; 
+}
+.pagination menu p:hover{
+    font-size: 1.65em;
+    color: #58c7d1;
+    cursor: pointer;
+    border-bottom: solid 6px #58c7d1; 
+}
+.selectedPagination{
+    font-size: 1.65em;
+    color: #58c7d1;
+    border-bottom: solid 6px #58c7d1;
 }
 @media screen and (max-width: 760px){
     h1{ 
