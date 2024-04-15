@@ -267,7 +267,7 @@ function paginationManager(event){
             pageNumber = 1;
             break;
         case "<":
-            pageNumber -= (pageNumber > 1) ? 1 : 0;
+            pageNumber = (pageNumber > 1) ? pageNumber - 1 : pageNumber;
             break;
         case "0":
             pageNumber = 10;
