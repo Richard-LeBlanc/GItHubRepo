@@ -14,6 +14,7 @@ function hideModal(event){
     event.target.parentNode.classList.add("hidden");
 }
 
+//  This was the recommendation from rapid api, I tried to get it to work through get properties like in class, but didn't understand how to format it, so I used the options as the second value in the fetch method.
 let url = 'https://jsearch.p.rapidapi.com/search?query={title}%20in%20{state}%2C%20{country}&page=1&num_pages=1';
 const options = {
 	method: 'GET',
@@ -23,13 +24,6 @@ const options = {
 	}
 };
 
-// try {
-// 	const response = await fetch(url, options);
-// 	const result = await response.text();
-// 	console.log(result);
-// } catch (error) {
-// 	console.error(error);
-// }
 
 submitButton.addEventListener("click", processForm);
 
@@ -69,6 +63,8 @@ function sanitize(string){
     return string;
 }
 
+//  process the forms information, replace multiple whitespaces with single whitespaces and turn those whitespaces into %20 to parse
+//  sentences.
 function buildURL(type, stringInput){
     
     try{
@@ -80,6 +76,8 @@ function buildURL(type, stringInput){
     }
 }
 
+//  run text fields through sanitizer functions and append them to the url,
+//  choice fields we just use the value of the selections.
 function processForm(event){
     event.preventDefault();
     try{
@@ -103,6 +101,7 @@ function processForm(event){
     
     paginationSection.classList.remove("hidden");
 
+    //  fetch data and await the response, when we receive it, call the buildJobArticles function.
     fetch(url, options).then(response => {
         return response.json();
     }).then(json => buildJobArticles(json));
@@ -111,6 +110,7 @@ function processForm(event){
 
 let pageNumber = 0;
 
+//  hide each article, then figures out which one to show based on the current pageNumber
 function showArticle(number){
     hideAllArticles();
     const show_value = number;
@@ -125,9 +125,9 @@ function showArticle(number){
         for(j = 0; j < classes.length; j++){
             if(classes[j].slice(0,3) == "job"){
                 if (classes[j].slice(-1) == show_value || (classes[j].slice(-1) == 0 && show_value == 10)){
-                    jobs[i].classList.remove("hidden");
-                    found = true;
-                    console.log("foundJob")
+                    jobs[i].classList.remove("hidden");     // when we find the correct job remove the hidden tag
+                    found = true;                           // and leave the for loops by checking flag value
+                    console.log("foundJob")//  for debugging
                     break;
                 }
             }
@@ -140,6 +140,7 @@ function showArticle(number){
     }
 }
 
+//  add the hidden tag to every article
 function hideAllArticles() {
     const jobs = document.querySelectorAll(".pagination article");
 
@@ -152,6 +153,7 @@ function buildJobArticles(jobsJson){
 
     //  an array of the items retrieved from the web-search is accessed through jobs
     const jobs = jobsJson.data;
+    document.getElementById("studentNumber").textContent = `Richard LeBlanc: 200 182 873`
 
     //  generate an article for each result returned from the api's data
     //  each article will have a unique class = "job" + (1+i);
@@ -257,6 +259,7 @@ function buildJobArticles(jobsJson){
     }
 }
 
+//  determines which page number to move to
 function paginationManager(event){
     const jobs = document.querySelectorAll(".pagination article");
     switch(event.target.textContent){
@@ -303,6 +306,6 @@ function paginationManager(event){
             pageNumber = jobs.length;
             break;
     }
-    console.log("showing " + pageNumber);
+    console.log("showing " + pageNumber); //  for debugging
     showArticle(pageNumber);
 }

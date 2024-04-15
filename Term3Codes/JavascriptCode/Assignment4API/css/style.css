@@ -1,3 +1,4 @@
+/* create basic styling for elements */
 p, label, input{
     font-size: 1.2em;
     display: block;
@@ -63,6 +64,7 @@ button{
     color: white;
     font-size: 1.6em;
 }
+/*Lay out each section, and give elements their appropriate space*/
 section{
     display: flex;
     flex-direction: column;
@@ -92,10 +94,13 @@ section > div:nth-child(3){
     justify-content: center;
     align-items: center;
 }
+/* Layout for the display of job information the pagination menu, close button, h3, and article will be 
+    place in a fixed position */
 .pagination{
     border: solid 5px #0e0e0e; 
     width: 100%;
 }
+/* stop displaying anything if it receives the "hidden" class name */
 .hidden{
     display: none;
 }
@@ -110,10 +115,16 @@ section > div:nth-child(3){
     overflow: auto;
     background-color: #e0e0e0;
 }
+/* give the job posting the main portion of the modal, and allow it's overflow to be accessed */
 .modal article{
-    position: relative;
-    top: 50%;
+    position: fixed;
+    top: 10%;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    overflow: auto;
 }
+/* Format and place the button in an accessible place.*/
 .modal > button{
     background-color: #d8c5c5;
     color: #0e0e0e;
@@ -136,6 +147,10 @@ section > div:nth-child(3){
     bottom: 4%;
     background-color: #e0e0e0;
     z-index: 2;
+}
+.pagination article img{
+    height: 20%;
+    width: auto;
 }
 .pagination h3{
     display: flex;
@@ -165,6 +180,13 @@ section > div:nth-child(3){
     font-size: 1.65em;
     color: #58c7d1;
     border-bottom: solid 6px #58c7d1;
+}
+#studentNumber{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: #e0e0e0;
+    z-index: 50;
 }
 @media screen and (max-width: 760px){
     h1{ 
